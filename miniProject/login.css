@@ -1,0 +1,99 @@
+body{
+    background-color:#0E2954
+}
+
+#section1{
+
+    margin-top: 11%;
+    margin-left: 33%;
+    border: solid black 3px;
+    border-radius: 10px;
+    width: 31%;
+    background-color:#267864;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    height: 14rem;
+   
+}
+input{
+    border-radius: 15px;
+}
+#maindiv{
+    text-align: center;
+    padding-left: 22%;
+  
+}
+
+td{
+    padding-top: 3%;
+}
+
+#butn{
+    margin-left: 45.5%;
+    margin-top: 1%;
+    font-size: x-large;
+    font-weight: bold;
+    background-color: #25539c;
+    color: white;
+    border: gold solid 2px;
+    border-radius: 10px;
+    text-align: center;
+    transition: .3s; 
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#butn:hover{
+    background-color:#45cfaf;
+   
+}
+#h1{
+    text-align: center;
+}
+
+input{
+    border-radius: 4px;
+    border: black solid;
+}
+
+option{
+    border-radius: 10px;
+    border: black solid;
+}
+#emailSpan{
+    font-size: small;
+    
+}
+#passSpan{
+    font-size: small;
+
+}
+
+
+@media (min-width: 280px) and (max-width: 500px){
+
+    #section1{
+        display: flex;
+        flex-wrap: wrap;
+      width: 80%;
+      
+    }
+body{
+    width: 100%;
+}
+}
+
+@media (min-width: 500px) and (max-width: 1000px){
+
+    #section1{
+        display: flex;
+        flex-wrap: wrap;
+      width: 50%;
+    }
+body{
+    width: 100%;
+}
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up</title>
+
+    <link rel="stylesheet" href="./signup.css">
+    
+
+</head>
+
+
+<body>
+
+    <section id="section1">
+        <h1 style="text-align: center;">Sign Up !</h1>
+
+        <div id="maindiv">
+
+        
+
+        <table>
+
+            <thead></thead>
+
+            <tbody>
+
+                <tr>
+                    <td><label for="fname" class="label1">First Name : </label></td>
+                    <td><input type="text" id="fname" name="fname" placeholder="First Name"></td>
+                </tr>
+                
+                <tr>
+                    <td><label for="middle" class="label1">Middle Name : </label></td>
+                    <td><input type="text" id="mname" name="middle" placeholder="Middle Name"></td>
+                </tr>
+
+               
+                <tr>
+                    <td><label for="last" class="label1">Last Name : </label></td>
+                    <td><input type="text" id="lname" name="last" placeholder="Last Name"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="family" class="label1">Family Name : </label></td>
+                    <td><input type="text" id="fmname" name="family" placeholder="Family Name"></td>
+                    <br> <span id="nameSpan"></span>
+
+                </tr>
+                
+
+                <tr>
+                    <td><label for="email" class="label1">Email : </label></td>
+                    <td><input type="text" name="email" id="email" placeholder="Email"></td>
+                </tr>
+                <tr>
+                    <td><label for="confirm email " class="label1">Confirm Email :</label></td>
+                    <td><input type="text" name="confirm email " id="Cemail" placeholder="Confirm Email ">
+                       <br> <span id="emailSpan"> </span>
+                    
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="Password" class="label1" >Password : </label></td>
+                    <td><input type="password" id="password" name="Password" placeholder="Password"></td>
+                </tr>
+                <tr>
+                    <td><label for="confirm password" class="label1">Confirm Password :</label></td>
+                    <td><input type="password" id="Cpassword" name="confirm password" placeholder="Confirm Password">
+                        <br> <span id="passSpan"></span>
+                    </td>
+                    
+                </tr>
+                <tr>
+                    <td> 
+                        <label for="date" > Date</label>
+                        <input type="date" name="date" id="date">
+                    </td>
+                    <td>
+                        <label for="check" style="font-size: small;">Show password</label>
+                        <input type="checkbox" id="check">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="phone" class="label1">Phone: </label></td>
+                    <td><input type="text" id="phone" name="phone" placeholder="Phone"
+                        size="14" maxlength="14"></td>
+                        <br> <span id="phoneSpan"></span>
+                </tr>
+
+            </tbody>
+
+
+        </table>
+    </div>
+    </section>
+
+    <button id="butn">Register</button>
+    
+</body>
+
+<script defer src="./signup.js"></script>
+
+</html>
