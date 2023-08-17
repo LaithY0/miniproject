@@ -1,7 +1,5 @@
 <?php include_once("conn.php");
-
-
-echo json_encode("1");
+echo $_SERVER['REQUEST_METHOD'];
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
 

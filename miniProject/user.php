@@ -13,7 +13,7 @@ if(isset($_GET)){
     $query = "SELECT * FROM users  ";
     $ret = $conn->query($query);
     $data = $ret->fetchAll(PDO::FETCH_ASSOC);
-    // echo json_encode($data);
+    echo json_encode($data);
 
 
 

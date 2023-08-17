@@ -1,99 +1,69 @@
-body{
-    background-color:#0E2954
+body {
+    background-color: #0E2954;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-#section1{
-
-    margin-top: 11%;
-    margin-left: 33%;
+#section1 {
+    margin: 11% auto;
     border: solid black 3px;
     border-radius: 10px;
-    width: 31%;
-    background-color:#267864;
+    width: 80%;
+    max-width: 400px;
+    background-color: #267864;
     color: white;
     font-size: large;
     font-weight: bold;
-    justify-content: center;
-    justify-items: center;
     text-align: center;
-    height: 14rem;
-   
-}
-input{
-    border-radius: 15px;
-}
-#maindiv{
-    text-align: center;
-    padding-left: 22%;
-  
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-td{
-    padding-top: 3%;
+#maindiv {
+    text-align: center;
 }
 
-#butn{
-    margin-left: 45.5%;
-    margin-top: 1%;
-    font-size: x-large;
+#butn {
+    margin: 10px auto;
+    font-size: large;
     font-weight: bold;
     background-color: #25539c;
     color: white;
     border: gold solid 2px;
     border-radius: 10px;
-    text-align: center;
-    transition: .3s; 
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-#butn:hover{
-    background-color:#45cfaf;
-   
-}
-#h1{
-    text-align: center;
+#butn:hover {
+    background-color: #45cfaf;
 }
 
-input{
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
     border-radius: 4px;
-    border: black solid;
+    box-sizing: border-box;
 }
 
-option{
-    border-radius: 10px;
-    border: black solid;
-}
-#emailSpan{
+#emailSpan,
+#passSpan {
     font-size: small;
-    
-}
-#passSpan{
-    font-size: small;
-
+    color: red;
 }
 
-
-@media (min-width: 280px) and (max-width: 500px){
-
-    #section1{
-        display: flex;
-        flex-wrap: wrap;
-      width: 80%;
-      
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    #section1 {
+        margin: 20% auto;
+        width: 90%;
     }
-body{
-    width: 100%;
-}
-}
 
-@media (min-width: 500px) and (max-width: 1000px){
-
-    #section1{
-        display: flex;
-        flex-wrap: wrap;
-      width: 50%;
+    #butn {
+        margin: 10px auto;
     }
-body{
-    width: 100%;
-}
 }

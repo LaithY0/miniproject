@@ -1,48 +1,61 @@
-#adminTable{
-
-    margin-top: 11%;
-    margin-left: 27%;
-    border: solid black 1px;
-    border-radius: 5px;
-    width: 45%;
-    background-color:#267864;
-    color: white;
-    font-size: large;
-    font-weight: bold;
-    justify-content: center;
-    justify-items: center;
-    text-align: center;
-  
-
+body {
+    background-color: #0E2954;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
 }
 
+.table-container {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-#userTable{
-
+#adminTable {
     margin-top: 1%;
-    margin-left: 27%;
     border: solid black 1px;
     border-radius: 5px;
-    width: 45%;
-    background-color:#267864;
+    width: 90%;
+    max-width: 500px;
+    background-color: #267864;
     color: white;
     font-size: large;
     font-weight: bold;
-    justify-content: center;
-    justify-items: center;
     text-align: center;
-
 }
 
-body{
-    background-color:#0E2954
 
+#userTable {
+    margin-top: 1%;
+    border: solid black 1px;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 500px;
+    background-color: #267864;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
 }
 
-/* #h1{
+
+h1 {
     color: white;
     font-weight: bold;
     text-align: center;
-    margin-top: 15%;
-    height: 0%;
-} */
+    margin-top: 10%;
+}
+
+@media (max-width: 768px) {
+    #adminTable {
+        width: 90%;
+    }
+    #userTable {
+        width: 90%;
+    }
+}

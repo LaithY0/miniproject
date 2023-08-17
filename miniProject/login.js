@@ -1,92 +1,71 @@
+document.getElementById("loginForm").addEventListener("submit", function (e) {
+  e.preventDefault();
 
-// let signin = document.getElementById('butn');
+  let users;
 
-
-// fetch('http://localhost/miniproject/miniProject/select.php', {
-//         method: 'POST',
-//         headers: {
-//             'Content-Type': 'application/json'
-//         },
-//     })
-//     .then(r => r.json()).then(data =>{ 
-       
-//        var users = data ;
-//     })
-   
-
-// signin.addEventListener('click' , function(){
-//    var email = document.getElementById('email').value;
-//    var password = document.getElementById('password').value;
-//    let span = document.getElementById('passSpan');
-// })
-   
-
-
-
-let signin = document.getElementById('butn');
-let users;
-
-fetch('./select.php', {
-    method: 'POST',
+  fetch("./select.php", {
+    method: "POST",
     headers: {
-        'Content-Type': 'application/json'
+      "Content-Type": "application/json",
     },
-})
-.then(r => r.json())
-.then(data => {
-    users = data; 
-    EventListener();
-})
-.catch(error => {
-    console.error('Error fetching data:', error);
+  })
+    .then((r) => r.json())
+    .then((data) => {
+      users = data;
+      setupEventListener(users);
+    })
+    .catch((error) => {
+      console.error("Error fetching data:", error);
+    });
 });
 
-function EventListener() {
-    signin.addEventListener('click', function() {
-        var email = document.getElementById('email').value;
-        var password = document.getElementById('password').value;
-        let span = document.getElementById('passSpan');
+function setupEventListener(users) {
+  let signin = document.getElementById("butn");
+  let span = document.getElementById("passSpan");
 
-        // console.log(users);
-        
-        for (let user of users) {
-            if (user.email == email && user.passwordd == password) {
+  signin.removeEventListener("click", signInClick);
+  signin.addEventListener("click", signInClick);
 
-                console.log(user);
-               
-fetch("result.php",{
+  function signInClick() {
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
 
-    "method": "POST",
+    let foundUser = false;
 
-    "headers": {
+    for (let i = 0; i < users.length; i++) {
+      if (users[i].email === email && users[i].passwordd === password) {
+        foundUser = true;
+        fetch("result.php", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json; charset=utf-8",
+          },
+          body: JSON.stringify(users[i]),
+        })
+          .then((r) => r.json())
+          .then((data) => {
+            users = data;
+          })
+          .catch((error) => {
+            console.error("Error fetching data:", error);
+          });
 
-        "Content-Type": "application/json; charset=utf-8"
-    },
+        window.open("./result.html");
+        break; // Exit the loop once a match is found
+      }
+    }
 
-    "body": JSON.stringify(user)
-
-    
-
-
-  });
-
-//   window.open("./result.html");
-                break;
-            }
-        }
-
-    });
+    if (!foundUser) {
+      span.innerText = "Wrong password or email.";
+      span.style.color = "red";
+    }
+  }
 }
 
-
-
-document.getElementById('check').onclick = function() {
-    if ( this.checked ) {
-       document.getElementById('password').type = "text";
-    } else {
-       document.getElementById('password').type = "password";
-
-    }}
-
-
-    
+document.getElementById("check").onclick = function () {
+  if (this.checked) {
+    document.getElementById("password").type = "text";
+  } else {
+    document.getElementById("password").type = "password";
+  }
+};
